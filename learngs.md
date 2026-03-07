@@ -9,11 +9,14 @@ created(copy & paste) a navbar using DaisyUI.
 Installed React Router Dom
 Tested some example routes
 
+Installed ReduxToolKit and react-redux
+configstore=>provider=>createSlice=>addreducers=>addSliceToStore
 
 Created a brwoser router ==>
     BrowserRouter ==> Routes ==> Route(path,ele) => Outlet 
 
-
+developed a login Page successfully
+If user is not logged in , any request naviagte to login page automatically
 
  -Login Page :- 
     Craeted a component using DaisyUI
