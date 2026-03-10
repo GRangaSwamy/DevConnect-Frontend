@@ -25,7 +25,10 @@ If user is not logged in , any request naviagte to login page automatically
     Successfully make a call to login api
     Verified cookies are set succesfully under Application tab in dev console
 
+ -Log out completed
+ when user logout ==> store is cleared 
 
+ Proper validations are made and error messages for incorrect credentials
 
 
 

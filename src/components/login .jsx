@@ -6,16 +6,16 @@ const Login = () => {
     const dispatch = useDispatch();
     const[email,setEmail] = useState("puli@gmail.com");
     const[password,setPassword] = useState("Pulii@24");
+    const [error,setError] = useState(null);
     const handleLogin = async ()=>{
          try{
            const res = await axios.post('http://localhost:3000/login',{
             email,password
           },{withCredentials:true});
-        //   console.log(res.data);
           dispatch(addUser(res.data))
          }catch(err){
-            console.log("Error in Login",err)
-         }
+          setError(err?.response?.data || "Something went wrong");
+        }
     }
   return (
     <div className="flex justify-center mt-4">
@@ -32,6 +32,7 @@ const Login = () => {
                         setPassword(e.target.value)
                     }} />
                 </fieldset>
+                {error && <p className="text-red-500">{error}</p>}
                 <div className="card-actions flex justify-center ">
                    <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                 </div>
